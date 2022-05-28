@@ -24,7 +24,10 @@ def main():
         current_directory = os.getcwd().split("/")[-1]
         command = input(f'➜ {current_directory}: ').strip()
 
-        if len(command) > 0:
+        if command == 'exit':
+            break
+
+        elif len(command) > 0:
             main_command = command.split(' ')[0] + '.py'
             parameters = ' '.join(command.split(' ')[1:])
 
